@@ -4,6 +4,6 @@ Comment=Interactive geometry system
 Comment[pl]=Interaktywny system geometryczny
 Icon=
 Exec=kseg
-Terminal=0
+Terminal=false
 Type=Application
 # vi: encoding=utf-8
