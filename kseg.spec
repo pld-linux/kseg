@@ -2,10 +2,11 @@ Summary:	KSEG is a free interactive geometry system
 Summary(pl):	KSEG jest darmowym interaktywnym systemem geometrycznym
 Name:		kseg
 Version:	0.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://www.mit.edu/~ibaran/%{name}-%{version}.tar.gz
+Source1:	%{name}.desktop
 Patch0:		%{name}-DEBIAN.patch
 URL:		http://www.mit.edu/~ibaran/kseg.html
 BuildRequires:	qt-devel
@@ -38,7 +39,8 @@ wygl±da zmianiany obiekt.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D kseg $RPM_BUILD_ROOT/%{_bindir}/kseg
+install -D kseg $RPM_BUILD_ROOT{%{_bindir}/kseg,%{_applnkdir}/Scientific/Mathematics}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific/Mathematics/%{name}.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,3 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README* AUTHORS* ChangeLog*
 %attr(755,root,root) %{_bindir}/*
+%{_applnkdir}/Scientific/Mathematics/*
