@@ -24,11 +24,11 @@ constructed objects respond.
 
 %description -l pl
 KSEG pozwala na interaktywne tworzenie konstrukcji geometrycznych,
-podobnie jak mo¿esz robiæ z brzegami. Punkty moga byæ wstawiane na
+podobnie jak mo¿esz robiæ z brzegami. Punkty mog± byæ wstawiane na
 stronie przez klikniêcie prawym przyciskiem, a potem u¿ywane do
-tworzenia segmentów, lini, okrêgów i innych geometrycznych obiektów. W
+tworzenia segmentów, linii, okrêgów i innych geometrycznych obiektów. W
 dowolnym momencie mo¿esz przenosiæ istniej±ce punkty i ogl±daæ jak
-wygl±da zmianiany obiekt.
+wygl±da zmieniany obiekt.
 
 %prep
 %setup -q
