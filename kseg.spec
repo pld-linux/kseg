@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://www.mit.edu/~ibaran/%{name}-%{version}.tar.gz
+# Source0-md5:	b7302130aa57f0707402340cbf0c7070
 Source1:	%{name}.desktop
 Patch0:		%{name}-DEBIAN.patch
 URL:		http://www.mit.edu/~ibaran/kseg.html
