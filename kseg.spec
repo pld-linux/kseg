@@ -1,3 +1,6 @@
+# TODO: 
+#	- kill _applnkdir
+#	- fix build
 Summary:	KSEG is a free interactive geometry system
 Summary(pl):	KSEG jest darmowym interaktywnym systemem geometrycznym
 Name:		kseg
@@ -9,6 +12,7 @@ Source0:	http://www.mit.edu/~ibaran/%{name}-%{version}.tar.gz
 # Source0-md5:	b7302130aa57f0707402340cbf0c7070
 Source1:	%{name}.desktop
 Patch0:		%{name}-DEBIAN.patch
+Patch1:		%{name}-qt_headers.patch
 URL:		http://www.mit.edu/~ibaran/kseg.html
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,9 +37,13 @@ wygl±da zmieniany obiekt.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
-%{__make} QTDIR=%{_prefix}/ CCFLAGS="%{rpmcflags} -c -fno-rtti -fno-exceptions -L%{_libdir}"
+%{__make} \
+	QTDIR=%{_prefix}/ \
+	CCFLAGS="%{rpmcflags} -c -fno-rtti -fno-exceptions -L%{_libdir}" \
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
