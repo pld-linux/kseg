@@ -1,0 +1,10 @@
+--- kseg-0.3.orig/formula/Makefile	2006-05-02 20:49:44.000000000 +0200
++++ kseg-0.3/formula/Makefile	2006-05-02 20:49:56.000000000 +0200
+@@ -1,6 +1,6 @@
+ # Makefile for formula
+ CC = gcc
+-QTINCLUDE = -I/usr/X11R6/include/qt
++QTINCLUDE = -I/usr/include/qt
+ CCFLAGS = -c -O2 -fno-rtti -fno-exceptions
+ LIBS = 
+ MOC = moc
