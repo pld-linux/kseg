@@ -17,7 +17,6 @@ URL:		http://www.mit.edu/~ibaran/kseg.html
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 KSEG allows you to interactively create a geometrical construction,
 similar to what you can do with a straight edge and compass. Points
@@ -42,7 +41,7 @@ wygl±da zmieniany obiekt.
 %build
 %{__make} \
 	QTDIR=%{_prefix}/ \
-	CCFLAGS="%{rpmcflags} -c -fno-rtti -fno-exceptions -L%{_libdir}" \
+	CCFLAGS="%{rpmcflags} -c -fno-rtti -fno-exceptions" \
 	CC="%{__cc}"
 
 %install
