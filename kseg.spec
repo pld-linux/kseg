@@ -2,7 +2,7 @@
 #	- kill _applnkdir
 #	- fix build
 Summary:	KSEG is a free interactive geometry system
-Summary(pl):	KSEG jest darmowym interaktywnym systemem geometrycznym
+Summary(pl.UTF-8):   KSEG jest darmowym interaktywnym systemem geometrycznym
 Name:		kseg
 Version:	0.3
 Release:	2
@@ -25,13 +25,13 @@ used to form segments, lines, circles, or other geometrical objects.
 At any time you can drag existing points around, and watch how the
 constructed objects respond.
 
-%description -l pl
+%description -l pl.UTF-8
 KSEG pozwala na interaktywne tworzenie konstrukcji geometrycznych,
-podobnie jak mo¿esz robiæ z brzegami. Punkty mog± byæ wstawiane na
-stronie przez klikniêcie prawym przyciskiem, a potem u¿ywane do
-tworzenia segmentów, linii, okrêgów i innych geometrycznych obiektów. W
-dowolnym momencie mo¿esz przenosiæ istniej±ce punkty i ogl±daæ jak
-wygl±da zmieniany obiekt.
+podobnie jak moÅ¼esz robiÄ‡ z brzegami. Punkty mogÄ… byÄ‡ wstawiane na
+stronie przez klikniÄ™cie prawym przyciskiem, a potem uÅ¼ywane do
+tworzenia segmentÃ³w, linii, okrÄ™gÃ³w i innych geometrycznych obiektÃ³w. W
+dowolnym momencie moÅ¼esz przenosiÄ‡ istniejÄ…ce punkty i oglÄ…daÄ‡ jak
+wyglÄ…da zmieniany obiekt.
 
 %prep
 %setup -q
