@@ -2,7 +2,7 @@
 #	- kill _applnkdir
 #	- fix build
 Summary:	KSEG is a free interactive geometry system
-Summary(pl.UTF-8):   KSEG jest darmowym interaktywnym systemem geometrycznym
+Summary(pl.UTF-8):	KSEG jest darmowym interaktywnym systemem geometrycznym
 Name:		kseg
 Version:	0.3
 Release:	2
