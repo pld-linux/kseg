@@ -1,0 +1,10 @@
+--- kseg-0.3/formula/kformula.cpp.orig	2007-03-31 13:16:16.000000000 +0000
++++ kseg-0.3/formula/kformula.cpp	2007-03-31 13:16:39.000000000 +0000
+@@ -28,6 +28,7 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <qregexp.h>
++#include <qpaintdevice.h>
+ 
+ using namespace Box;
+ 
