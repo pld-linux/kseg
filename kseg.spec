@@ -1,5 +1,4 @@
 # TODO: 
-#	- kill _applnkdir
 #	- fix build
 Summary:	KSEG is a free interactive geometry system
 Summary(pl.UTF-8):	KSEG jest darmowym interaktywnym systemem geometrycznym
@@ -12,7 +11,7 @@ Source0:	http://www.mit.edu/~ibaran/%{name}-%{version}.tar.gz
 # Source0-md5:	b7302130aa57f0707402340cbf0c7070
 Source1:	%{name}.desktop
 Patch0:		%{name}-DEBIAN.patch
-Patch1:		%{name}-qt_headers.patch
+Patch1:		%{name}-headerfile.patch
 URL:		http://www.mit.edu/~ibaran/kseg.html
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -40,14 +39,16 @@ wygląda zmieniany obiekt.
 
 %build
 %{__make} \
-	QTDIR=%{_prefix}/ \
+	QTDIR=%{_prefix} \
 	CCFLAGS="%{rpmcflags} -c -fno-rtti -fno-exceptions" \
-	CC="%{__cc}"
+	CC="%{__cxx}" \
+	QTINCLUDE="-I/usr/include/qt"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D kseg $RPM_BUILD_ROOT{%{_bindir}/kseg,%{_applnkdir}/Scientific/Mathematics}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific/Mathematics/%{name}.desktop
+install -D kseg $RPM_BUILD_ROOT{%{_bindir}/kseg,%{_desktopdir}}
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,4 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README* AUTHORS* ChangeLog*
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Scientific/Mathematics/*
+%{_desktopdir}/kseg.desktop
