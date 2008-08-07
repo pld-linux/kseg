@@ -1,0 +1,12 @@
+diff -Naur kseg/KSegConstructionList.cpp kseg.new/KSegConstructionList.cpp
+--- kseg/KSegConstructionList.cpp	2006-02-04 02:06:38.000000000 +0000
++++ kseg.new/KSegConstructionList.cpp	2008-08-07 23:10:23.000000000 +0000
+@@ -218,6 +218,8 @@
+ {
+   if((ev->state() & LeftButton) == 0) return;
+ 
++  if ((int)itemYCoords.size() == 0) return;
++
+   if(scrollTimer.isActive() == false) scrollTimer.start(10);
+ 
+   int which = getItemFromYCoord(ev->y());
