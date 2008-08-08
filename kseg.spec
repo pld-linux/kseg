@@ -25,19 +25,19 @@ constructed objects respond.
 
 %description -l hu.UTF-8
 KSEG egy program, amellyel interaktívan készíthetsz geometriai
-ábrékat, hasonlóan, ahogy a valóságban is tennéd. Pontokat rakhatsz le
-a lapra az egér jobb gombjával, és ezeket használhatod fel szakaszok,
-vonalaok, körök, vagy bármely más geometriai objektumokhoz. Bármikor
-mozgathatod a lerakott pontokat, és láthatod, hogy a készített
-objektumok hogyan változnak.
+ábrékat, hasonlóan, ahogy a valóságban is tennéd. Pontokat
+rakhatsz le a lapra az egér jobb gombjával, és ezeket használhatod
+fel szakaszok, vonalaok, körök, vagy bármely más geometriai
+objektumokhoz. Bármikor mozgathatod a lerakott pontokat, és
+láthatod, hogy a készített objektumok hogyan változnak.
 
 %description -l pl.UTF-8
-KSEG pozwala na interaktywne tworzenie konstrukcji geometrycznych,
-podobnie jak możesz robić z brzegami. Punkty mogą być wstawiane na
-stronie przez kliknięcie prawym przyciskiem, a potem używane do
-tworzenia segmentów, linii, okręgów i innych geometrycznych obiektów.
-W dowolnym momencie możesz przenosić istniejące punkty i oglądać jak
-wygląda zmieniany obiekt.
+KSEG pozwala na interaktywne tworzenie konstrukcji geometrycznych
+"cyrklem i linijką". Punkty mogą być wstawiane na stronie przez
+kliknięcie prawym przyciskiem, a potem używane do tworzenia
+segmentów, linii, okręgów i innych geometrycznych obiektów. W
+dowolnym momencie możesz przenosić istniejące punkty i oglądać
+jak wygląda zmieniany obiekt.
 
 %prep
 %setup -q -n %{name}
