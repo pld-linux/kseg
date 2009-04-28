@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	KSEG egy ingyenes, interaktív geometriai rendszer
 Summary(pl.UTF-8):	KSEG jest darmowym interaktywnym systemem geometrycznym
 Name:		kseg
 Version:	0.403
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://www.mit.edu/~ibaran/%{name}-%{version}.tar.gz
@@ -62,6 +62,9 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
+install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
+install *.qm $RPM_BUILD_ROOT%{_datadir}/%{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -71,3 +74,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_examplesdir}/%{name}-%{version}
 %{_desktopdir}/kseg.desktop
+%{_datadir}/kseg
